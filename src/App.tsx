@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Container, Stack } from "react-bootstrap";
 import NewNote from "./NewNote";
 import useLocalStorage from "./UseLocalStorage";
 import { useMemo } from "react";
@@ -96,10 +96,8 @@ function App() {
     });
   }
   return (
-  <>
-    <div className="card">
-      <Container className="my-4">
-
+    <>
+      <Container className="my-4  card">
         <Routes>
           <Route
             path="/"
@@ -138,8 +136,29 @@ function App() {
           <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </Container>
-    </div></>)
-  
+
+      <Container className="card2 ">
+        {" "}  <h6>App developed by</h6>
+        <Stack direction="horizontal" className="justify-content-start stack">
+          <h5>Shiv Nandan Jha</h5>
+          <Stack direction="horizontal" > <a target={"_blank"}  href="https://www.linkedin.com/in/shiv-nandan-jha-4179a4251">
+            <img className="Link" src="../linkedin.png" alt="Linkedin" />
+          </a>
+          <a target={"_blank"}  href="https://github.com/ShivNandanJha">
+            <img className="link2" src="../github.png" alt="github" />
+          </a>
+          <a target={"_blank"}  href="https://codepen.io/Shivi-Code">
+            <img className="link3" src="../codepen.png" alt="codepan" />
+          </a>
+          <a target={"_blank"} href="https://www.instagram.com/probably_shiv/">
+            <img className="link3" src="../instagram.png" alt="instagram" />
+          </a></Stack>
+         
+        </Stack>
+        
+      </Container>
+    </>
+  );
 }
 
 export default App;
