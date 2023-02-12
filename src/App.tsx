@@ -96,7 +96,7 @@ function App() {
     });
   }
   return (
-    <>
+    <> <div className="container">
       <Container className="my-4  card">
         <Routes>
           <Route
@@ -137,26 +137,27 @@ function App() {
         </Routes>
       </Container>
 
-      <Container className="card2 ">
+      <Container className="card">
         {" "}  <h6>App developed by</h6>
-        <Stack direction="horizontal" className="justify-content-start stack">
+        <Stack className="justify-content-start ">
           <h5>Shiv Nandan Jha</h5>
-          <Stack direction="horizontal" > <a target={"_blank"}  href="https://www.linkedin.com/in/shiv-nandan-jha-4179a4251">
+          <Stack className="ml-5" direction="horizontal"  > <a target={"_blank"} rel="noreferrer" href="https://www.linkedin.com/in/shiv-nandan-jha-4179a4251">
             <img className="Link" src="../linkedin.png" alt="Linkedin" />
           </a>
-          <a target={"_blank"}  href="https://github.com/ShivNandanJha">
+          <a target={"_blank"} rel="noreferrer"  href="https://github.com/ShivNandanJha">
             <img className="link2" src="../github.png" alt="github" />
           </a>
-          <a target={"_blank"}  href="https://codepen.io/Shivi-Code">
+          <a target={"_blank"} rel="noreferrer" href="https://codepen.io/Shivi-Code">
             <img className="link3" src="../codepen.png" alt="codepan" />
           </a>
-          <a target={"_blank"} href="https://www.instagram.com/probably_shiv/">
+          <a target={"_blank"} rel="noreferrer" href="https://www.instagram.com/probably_shiv/">
             <img className="link3" src="../instagram.png" alt="instagram" />
           </a></Stack>
          
         </Stack>
         
       </Container>
+      </div>
     </>
   );
 }
